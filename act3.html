@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <title>Belajar Javascript</title>
+   </head>
+   <body>
+       <h1>RENTAL KOMPUTER</h1>
+       Nama: <br>
+       <input type="text" name=""><br>
+       Jam: <br>
+       <input type="text" id="jam"> <br><br>
+       <select id="jenis">
+           <option value="comp1">Komputer 1</option>
+           <option value="comp2">Komputer 2</option>
+       </select><br><br>
+       bayar: <label id="bayar">...</label>
+       <button onclick="cek()">hasil</button>
+       <script type="text/javascript">
+           function cek(){
+               var jam = parseInt(document.getElementById("jam").value);
+               var jenis = document.getElementById('jenis').value;
+               var bayar;
+               if(jam<=3){
+                   if(jenis=="comp1"){
+                       bayar=10000*jam;
+                   }else{
+                       if(jenis="comp2"){
+                           bayar=15000*jam;
+                       }
+                   }
+               }else{
+                   if(jenis=="comp1"){
+                       bayar=10000*jam-2000;
+                   }else{
+                       if(jenis=='comp2'){
+                           bayar=15000*jam-2000;
+                       }
+                   }
+               }document.getElementById('bayar').innerHTML=bayar
+           }
+       </script>
+   </body>
+   
+   <footer style=" color:black; padding:50px 20px;">
+    <p>&copy; Copyright by Dimas 50420384.</p>
+  </footer>
+
+</html>
